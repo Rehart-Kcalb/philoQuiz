@@ -35,7 +35,7 @@ function displayQuestion() {
         const shuffledOptions = shuffleArray([...question.options, question.philosopher]);
 
         quizContainer.innerHTML = `
-            <p class="text-lg mb-4">${question.quote}</p>
+            <blockquote class="text-lg mb-4 italic border-l-4 border-blue-500 pl-4">${question.quote}</blockquote>
             <div class="grid grid-cols-2 gap-4">
                 ${shuffledOptions.map(option => `<button class="bg-gray-200 p-2 rounded-md quiz-option" data-option="${option}">${option}</button>`).join('')}
             </div>
